@@ -132,7 +132,8 @@ public class SurveyCheckService {
     public int surveyCheck(int sno  , int state){
         MemberDto memberDto = memberService.doLogininfo();
         // 만약 검사자 또는 관리자 가 아니라면 등록 실패
-        if (memberDto.getPart() != 10 && memberDto.getPart() != -1) {
+        System.out.println("memberDto = " + memberDto);
+        if ( (memberDto.getPart() != 10) && (memberDto.getPart() != -1) ) {
             return -1;
         }
         SurveyEntity survey = surveyGetList(sno);

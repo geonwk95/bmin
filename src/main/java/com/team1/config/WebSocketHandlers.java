@@ -16,6 +16,6 @@ public class WebSocketHandlers implements WebSocketConfigurer {
     @Override // 1. 웹소켓 매핑 등록
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         // - ws 로 요청된 url 들을 어디로 핸들러 할껀지 정의 설정
-        registry.addHandler(alertSocekt, "/");
+        registry.addHandler(alertSocekt, "/socket");
     } //
 }
