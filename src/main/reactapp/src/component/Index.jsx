@@ -70,7 +70,7 @@ export default function Index(props){
 
         // =============== (클라이언트 )웹 소켓 구현 =============== //
             // 1. let clientSocket = new WebSocket(서버 소켓 url); // 비동기 // 서버소켓에게 접속 요청
-        clientSocket.current = new WebSocket('ws://192.168.17.11:80/socket');
+        clientSocket.current = new WebSocket('ws://localhost:80/socket');
             // 확인
         console.log(clientSocket);
         // onclose , onerror , onmessage , onopen : WebSocket 객체내 포함된 메소드들

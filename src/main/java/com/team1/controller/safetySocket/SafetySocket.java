@@ -50,6 +50,7 @@ public class SafetySocket extends TextWebSocketHandler implements DisposableBean
     public String serial(){
         SerialPort[] ports = SerialPort.getCommPorts();
         System.out.println("스케쥴러실행");
+/*
         // 첫 번째 시리얼 포트를 선택하여 엽니다. 포트의 인덱스를 조정하여 필요한 포트를 선택할 수 있습니다.
         SerialPort selectedPort = ports[1];
         selectedPort.openPort();
@@ -86,7 +87,7 @@ public class SafetySocket extends TextWebSocketHandler implements DisposableBean
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+*/
         // 시리얼 포트를 닫습니다
 
         return null;
@@ -107,25 +108,25 @@ public class SafetySocket extends TextWebSocketHandler implements DisposableBean
     //스케쥴러 안쓰기해볼때용
 
     public void doPost() {
-        String result = 100+"";
-        result = serial().split("\n")[1]; //아두이노 연동했을떄 사용
-        System.out.println("소켓 체크용");
-        System.out.println("나온 거리:"+result);
-
-
-        try {
-            WebSocketMessage<String> sendmessage = new TextMessage(result);
-//            System.out.println(sendmessage.getPayload());
-//            System.out.println(sendmessage.getPayload()+"를 보냅니다");
-            for (WebSocketSession webSocketSession : 접속명단) {
-                webSocketSession.sendMessage(sendmessage);
-            }
-
-//            System.out.println(sendmessage);
-        }
-        catch (Exception e ){
-            System.out.println(e);
-        }
+//        String result = 100+"";
+//        result = serial().split("\n")[1]; //아두이노 연동했을떄 사용
+//        System.out.println("소켓 체크용");
+//        System.out.println("나온 거리:"+result);
+//
+//
+//        try {
+//            WebSocketMessage<String> sendmessage = new TextMessage(result);
+////            System.out.println(sendmessage.getPayload());
+////            System.out.println(sendmessage.getPayload()+"를 보냅니다");
+//            for (WebSocketSession webSocketSession : 접속명단) {
+//                webSocketSession.sendMessage(sendmessage);
+//            }
+//
+////            System.out.println(sendmessage);
+//        }
+//        catch (Exception e ){
+//            System.out.println(e);
+//        }
     }
 
 
