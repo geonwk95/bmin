@@ -107,7 +107,9 @@ insert into subdivision (checkmno ,fail_count,inputmno,mfno,sdno,sdstate,success
 
 -- 유통기한 샘플 데이터 추가
 insert into productlog(pno,plcount,cdate) values(2,-10,"2022-11-11") , (2,-20,now()) , (2,40,now()) , (2,500,"2022-11-11"),(3,-10,"2022-11-11") , (3,-20,now()) , (3,40,now()) , (3,500,"2022-11-11");
-
+insert into productlog(pno, plcount , cdate) values(1,10,now()),(1,-5,"2024-04-01"),(1,0,"2024-04-08"),(1,100,"2024-04-25");
+insert into productlog(pno, plcount , cdate) values(2,12,now()),(2,-10,"2024-04-01"),(2,0,"2024-04-08"),(2,50,"2024-04-25");
+insert into productlog(pno, plcount , cdate) values(3,15,now()),(3,-20,"2024-04-01"),(3,10,"2024-04-08"),(3,70,"2024-04-25");
 
  INSERT INTO expiration (pno, plcount , cdate)
       SELECT outgoing.pno,  (COALESCE(expired.expired_quantity, 0) + outgoing.total_outgoing)*-1 AS remaining_quantity , now()

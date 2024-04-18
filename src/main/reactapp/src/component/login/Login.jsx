@@ -67,8 +67,8 @@ export default function Header(props) {
     // 컴포넌트를 렌더링합니다.
     return (  
 <div id='loginWrap'>
-    <div class="loginHeader">
-        <h2>로그인</h2>
+    <div class="loginLogo">
+        <img src="/static/img/logo.png" width={'200px'}/>
     </div>
     <form>
         <div class="inputGroup , InputID">
