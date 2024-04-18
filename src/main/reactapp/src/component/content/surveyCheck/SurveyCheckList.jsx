@@ -43,8 +43,8 @@ export default function SurveyCheckList(props){
         axios.put('/survey/check/complete/put.do',confirmFormData)
         .then(r=>{
             // console.log("35");
-            // console.log(r);
-            if(r.data){
+            console.log(r.data);
+            if(r.data >= 1){
                 // wstate 변경
                 let data = {
                     wno : wno,

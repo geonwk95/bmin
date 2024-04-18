@@ -7,7 +7,7 @@ export default function LayoutTest2(props){
     const [msgInput, setMsgInput] = useState("");
     let clientSocket = useRef(null);
     if(!clientSocket.current){
-            clientSocket.current = new WebSocket("ws://localhost/safety");
+            clientSocket.current = new WebSocket("ws://192.168.17.11/safety");
         //onmclose // onerror // onmessage // onopen : 웹소켓 객체네 포함된 메소드들
             //2.각 메소드 정의
                 //1.클라이언트 소켓이 close발생했을때 콜백함수 정의 

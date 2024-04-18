@@ -108,9 +108,9 @@ public class SafetySocket extends TextWebSocketHandler implements DisposableBean
 
     public void doPost() {
         String result = 100+"";
-//        result = serial().split("\n")[1]; //아두이노 연동했을떄 사용
-//        System.out.println("소켓 체크용");
-//        System.out.println("나온 거리:"+result);
+        result = serial().split("\n")[1]; //아두이노 연동했을떄 사용
+        System.out.println("소켓 체크용");
+        System.out.println("나온 거리:"+result);
 
 
         try {
